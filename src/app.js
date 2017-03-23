@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import {
-  Header,
-  // CheckinMap,
-  // CheckinButton,
-  // CheckinList,
-  // CheckinModal
-} from './components/index';
+  Header
+} from './components';
 
 export default class App extends Component {
   render() {
