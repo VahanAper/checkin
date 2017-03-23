@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import {
   Header,
   CheckinMap,
-  CheckinButton
+  CheckinButton,
+  CheckinList
 } from './components';
 
 export default class App extends Component {
@@ -14,6 +15,7 @@ export default class App extends Component {
           <CheckinMap lat={40.178115} lng={44.513244} zoom={17} />
         </div>
         <CheckinButton />
+        <CheckinList />
       </div>
     );
   }

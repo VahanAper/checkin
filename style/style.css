@@ -1,8 +1,14 @@
 .header,
-.checkin-button {
+.checkin-button,
+.checkin-list {
   text-align: center;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 .map {
   height: 300px;
+}
+.list-item {
+  border-bottom: 2px solid #CCC;
+  padding: 5px;
+  margin: 5px;
 }
