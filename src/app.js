@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
   Header,
-  CheckinMap
+  CheckinMap,
+  CheckinButton
 } from './components';
 
 export default class App extends Component {
@@ -9,7 +10,10 @@ export default class App extends Component {
     return (
       <div>
         <Header title="Check-in Yourself" />
-        <CheckinMap lat={40.178115} lng={44.513244} zoom={17} />
+        <div className="row">
+          <CheckinMap lat={40.178115} lng={44.513244} zoom={17} />
+        </div>
+        <CheckinButton />
       </div>
     );
   }

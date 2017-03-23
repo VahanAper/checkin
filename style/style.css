@@ -1,7 +1,8 @@
-.header {
+.header,
+.checkin-button {
   text-align: center;
-  margin: 2em 0;
+  margin: 10px 0;
 }
 .map {
-  height: 15em;
+  height: 300px;
 }
