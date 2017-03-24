@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
   Header,
-  CheckinMap,
+  GeoMap as CheckinMap,
   CheckinButton,
   CheckinList,
   Modal,
@@ -14,7 +14,7 @@ export default class App extends Component {
       <div className="container">
         <Header title="Check-in Yourself" />
         <div className="row">
-          <CheckinMap lat={40.178115} lng={44.513244} zoom={17} />
+          <CheckinMap zoom={17} />
         </div>
         <CheckinButton target="#checkin-modal" title="Check-in Now" />
         <CheckinList />

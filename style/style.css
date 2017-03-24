@@ -27,3 +27,8 @@
 .modal-header h4 {
   margin: 0;
 }
+.no-geolocation {
+  text-align: center;
+  padding: 5px;
+  font-size: 18px;
+}
