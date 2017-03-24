@@ -5,7 +5,9 @@ class CheckinButton extends Component {
     return (
       <div className="checkin-button row">
         <div className="col-md-12">
-          <button className="btn btn-primary">Check-in Now</button>
+          <button className="btn btn-primary" data-toggle="modal" data-target={this.props.target}>
+            {this.props.title}
+          </button>
         </div>
       </div>
     );
