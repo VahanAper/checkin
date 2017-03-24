@@ -3,3 +3,4 @@ export * from './CheckinMap';
 export * from './CheckinButton';
 export * from './CheckinList';
 export * from './Modal';
+export * from './CheckinForm';

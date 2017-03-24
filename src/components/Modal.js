@@ -7,10 +7,7 @@ class Modal extends Component {
         <div className="modal-dialog modal-sm" role="document">
           <div className="modal-content">
             <div className="modal-header">
-              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-              <h4>{this.props.header}</h4>
+              <h4 className="text-center">{this.props.header}</h4>
             </div>
             <div className="modal-body">
               {this.props.children}

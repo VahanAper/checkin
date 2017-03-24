@@ -4,7 +4,8 @@ import {
   CheckinMap,
   CheckinButton,
   CheckinList,
-  Modal
+  Modal,
+  CheckinForm
 } from './components';
 
 export default class App extends Component {
@@ -18,7 +19,11 @@ export default class App extends Component {
         <CheckinButton target="#checkin-modal" title="Check-in Now" />
         <CheckinList />
         <Modal header="Please enter your name" id="checkin-modal">
-          <div>modal boody</div>
+          <CheckinForm
+            label="Name"
+            submitText="Checkin"
+            cancelText="Cancel"
+          />
         </Modal>
       </div>
     );
