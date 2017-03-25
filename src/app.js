@@ -1,20 +1,34 @@
 import React, { Component } from 'react';
+import { geolocated } from 'react-geolocated';
 import {
   Header,
-  GeoMap as CheckinMap,
+  CheckinMap,
   CheckinButton,
   CheckinList,
   Modal,
   CheckinForm
 } from './components';
 
-export default class App extends Component {
+class App extends Component {
+  renderGeolocation() {
+    const { coords } = this.props;
+    if (!this.props.coords) {
+      return (
+        <div className="col-md-8 col-md-offset-2 bg-warning text-warning no-geolocation">
+          Please allow geolocation.
+        </div>
+      );
+    }
+
+    return <CheckinMap zoom={17} coords={coords} />;
+  }
+
   render() {
     return (
       <div className="container">
         <Header title="Check-in Yourself" />
         <div className="row">
-          <CheckinMap zoom={17} />
+          {this.renderGeolocation()}
         </div>
         <CheckinButton target="#checkin-modal" title="Check-in Now" />
         <CheckinList />
@@ -29,3 +43,10 @@ export default class App extends Component {
     );
   }
 }
+
+export default geolocated({
+  positionOptions: {
+    enableHighAccuracy: false,
+  },
+  userDecisionTimeout: 5000
+})(App);

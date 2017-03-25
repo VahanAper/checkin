@@ -1,21 +1,8 @@
 import React, { Component } from 'react';
 import { GoogleMapLoader, GoogleMap, Marker } from 'react-google-maps';
-import { geolocated } from 'react-geolocated';
 
 class CheckinMap extends Component {
-  geolocationReqired() {
-    return (
-      <div className="col-md-8 col-md-offset-2 bg-warning text-warning no-geolocation">
-        Please allow geolocation.
-      </div>
-    );
-  }
-
   render() {
-    if (this.props.coords === null) {
-      return this.geolocationReqired();
-    }
-
     return (
       <GoogleMapLoader
         containerElement={
@@ -36,11 +23,4 @@ class CheckinMap extends Component {
   }
 }
 
-const GeoMap = geolocated({
-  positionOptions: {
-    enableHighAccuracy: false,
-  },
-  userDecisionTimeout: 5000
-})(CheckinMap);
-
-export { GeoMap };
+export { CheckinMap };
