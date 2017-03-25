@@ -5,7 +5,12 @@ class CheckinButton extends Component {
     return (
       <div className="checkin-button row">
         <div className="col-md-12">
-          <button className="btn btn-primary" data-toggle="modal" data-target={this.props.target}>
+          <button
+            disabled={!this.props.coords}
+            className="btn btn-primary"
+            data-toggle="modal"
+            data-target={this.props.target}
+          >
             {this.props.title}
           </button>
         </div>

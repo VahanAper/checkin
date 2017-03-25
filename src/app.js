@@ -6,7 +6,7 @@ import {
   CheckinButton,
   CheckinList,
   Modal,
-  CheckinForm
+  CheckinReduxForm as CheckinForm
 } from './components';
 
 class App extends Component {
@@ -30,13 +30,14 @@ class App extends Component {
         <div className="row">
           {this.renderGeolocation()}
         </div>
-        <CheckinButton target="#checkin-modal" title="Check-in Now" />
+        <CheckinButton target="#checkin-modal" title="Check-in Now" coords={this.props.coords} />
         <CheckinList />
         <Modal header="Please enter your name" id="checkin-modal">
           <CheckinForm
             label="Name"
             submitText="Checkin"
             cancelText="Cancel"
+            coords={this.props.coords}
           />
         </Modal>
       </div>
